@@ -1,0 +1,16 @@
+{
+
+  "name": "myNodeJs",
+  "version": "0.12.7",
+  "author" : "Danaekola",
+  "description" : "Nodejs pos_v2",
+  "keywords" : "javascript, nodejs",
+  "respository" : {
+    "type" :"git",
+    "url" :"https://github.com/Danaekola/node-pos"
+  },
+  "scripts" : {
+    "start" : "node test.js"
+  }
+ 
+}
