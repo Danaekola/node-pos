@@ -10,7 +10,7 @@
     "url" :"https://github.com/Danaekola/node-pos"
   },
   "scripts" : {
-    "start" : "jasmine-node spec/main-test.spec.js"
+    "start" : "jasmine-node test/main-test.spec.js"
   }
  
 }

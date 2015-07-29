@@ -1,5 +1,5 @@
-var main = require('../klass/main.js');
-var fixtures = require('../klass/fixtures');
+var main = require('../lib/main.js');
+var fixtures = require('../lib/fixtures');
 describe('pos', function() {
   var allItems, inputs, dateDigitToString;
 
