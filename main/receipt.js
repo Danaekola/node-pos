@@ -1,4 +1,6 @@
 var Utils = require('./utils');
+var Time = require('./time');
+
 
 function Receipt(cartItems){
   this.cartItems = cartItems;
@@ -17,5 +19,21 @@ Receipt.prototype.itemString = function() {
 });
   return itemString;
 };
+Receipt.prototype.print = function(cart,pos,discount){
+  var time = new Time();
+  var cartItems = cart.cartItems;
+
+  var receipt ='***<没钱赚商店>收据***\n' +'打印时间：' + 
+  time.timer()+ '\n' + '----------------------\n'+
+  pos.getItemString(cartItems) +
+  '----------------------\n' +
+  '挥泪赠送商品：\n' +
+  discount.discountString +
+  '----------------------\n' +
+  '总计：' + Utils.formatPrice(cart.getTotalPrice()) + '(元)\n' +
+  '节省：' + Utils.formatPrice(discount.saveTotal) + '(元)\n' +
+  '**********************';
+  return receipt;
+}
  module.exports = Receipt;
 
