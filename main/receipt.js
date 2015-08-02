@@ -10,7 +10,7 @@ Receipt.prototype.itemString = function() {
   var itemString = '';
   var _this = this;
   _this.cartItems.forEach(function(cartItem){
-  
+
   itemString += '名称' + '：'+ cartItem.item.name + '，'+
   '数量' + '：' + cartItem.count +cartItem.item.unit + '，'+
   '单价' + '：' + Utils.formatPrice(cartItem.item.price) + '(元)' + '，' +
@@ -23,7 +23,7 @@ Receipt.prototype.print = function(cart,pos,discount){
   var time = new Time();
   var cartItems = cart.cartItems;
 
-  var receipt ='***<没钱赚商店>收据***\n' +'打印时间：' + 
+  var receipt ='***<没钱赚商店>收据***\n' +'打印时间：' +
   time.timer()+ '\n' + '----------------------\n'+
   pos.getItemString(cartItems) +
   '----------------------\n' +
@@ -34,6 +34,5 @@ Receipt.prototype.print = function(cart,pos,discount){
   '节省：' + Utils.formatPrice(discount.saveTotal) + '(元)\n' +
   '**********************';
   return receipt;
-}
+};
  module.exports = Receipt;
-

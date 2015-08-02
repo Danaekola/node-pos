@@ -12,7 +12,7 @@ Promotion.prototype.promotionItem = function(cartItem) {
        return this.getPromotionItem(cartItem,promotions[x]);
     }
   }
-}
+};
 Promotion.prototype.getPromotionItem = function(cartItem,promotionsItem) {
   var barcodes = promotionsItem.barcodes;
   for(var i = 0; i < barcodes.length; i++) {
@@ -21,8 +21,8 @@ Promotion.prototype.getPromotionItem = function(cartItem,promotionsItem) {
       return cartItem;
 	  }
   }
-  
-}
+
+};
 
 Promotion.prototype.getPromotion=function(cartItems) {
   var promotionString = '';
