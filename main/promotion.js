@@ -9,7 +9,7 @@ Promotion.prototype.promotionItem = function(cartItem) {
   var promotions = disBarcodes.loadPromotions();
   for(var x = 0; x < promotions.length; x++){
     if(promotions[x].type == 'BUY_TWO_GET_ONE_FREE'){
-       return this.getPromotionItem(cartItem,promotions[x]);
+      return this.getPromotionItem(cartItem,promotions[x]);
     }
   }
 };
