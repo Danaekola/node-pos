@@ -14,8 +14,7 @@ Receipt.prototype.itemString = function() {
   itemString += '名称' + '：'+ cartItem.item.name + '，'+
   '数量' + '：' + cartItem.count +cartItem.item.unit + '，'+
   '单价' + '：' + Utils.formatPrice(cartItem.item.price) + '(元)' + '，' +
-  '小计' + '：' + Utils.formatPrice(Utils.getSubtotal(cartItem.count-Math.floor(cartItem.count/3),cartItem.item.price))
-   + '(元)' +'\n';
+  '小计' + '：' + Utils.formatPrice(Utils.getSubtotal(cartItem.count-Math.floor(cartItem.count/3),cartItem.item.price))+ '(元)' +'\n';
 });
   return itemString;
 };
